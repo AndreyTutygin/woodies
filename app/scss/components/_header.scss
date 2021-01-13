@@ -1,1 +1,105 @@
-//
+.header {
+    position: absolute;
+    padding: 20px 0;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        &-svg {
+            --logo-txt-color: #3e3f43;
+            --logo-icon-color: #daa520;
+
+            width: 192px;
+            height: 33px;
+        }
+    }
+}
+
+.nav {
+    min-width: 737px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link {
+        font-size: 16px;
+        color: rgba(34, 34, 34, 0.75);
+        transition: 0.4s;
+
+        &:hover {
+            color: $mainColor;
+        }
+    }
+
+    @include media(1000) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+
+    &__list {
+        padding-top: 100px;
+        width: 200px;
+        height: 100vh;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: rgba($mainColor, 0.7);
+        transform: translate(100%, 0);
+        transition: 0.8s;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 10px 0;
+        width: 100%;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: darken($mainColor, 5);
+        }
+    }
+
+    &__sign {
+        margin: 20px auto 0;
+    }
+
+    &_active {
+        .mobile-nav__list {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $txtColor;
+    border-radius: 8px;
+    width: 137px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: 0.4s;
+
+    &:hover {
+        color: #fff;
+        background-color: $txtColor;
+    }
+}
