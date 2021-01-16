@@ -1,5 +1,5 @@
 .hero {
-    padding: 270px 0 327px;
+    padding: 270px 0 281px;
 
     &__container {
         position: relative;
@@ -36,8 +36,8 @@
         background-repeat: no-repeat;
     }
 
-    @include media(1000) {
-        padding: 170px 0 327px;
+    @include media(1050) {
+        padding: 170px 0 281px;
 
         &__txt {
             margin: 0 auto;

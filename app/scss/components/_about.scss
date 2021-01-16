@@ -1,0 +1,129 @@
+.about {
+    padding-bottom: 300px;
+
+    &__container {
+
+    }
+
+    &__content {
+        margin-top: 49px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &:last-child {
+            justify-content: flex-start;
+            margin-top: 200px;
+
+            .about__txt {
+                margin: -32px 0 0 73px;
+                max-width: 660px;
+            }
+        }
+    }
+
+    &__img {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &_1 {
+            width: 426px;
+            height: 388px;
+            background-image: url("./../img/about__img_1.png");
+        }
+
+        &_2 {
+            position: absolute;
+            right: -28px;
+            top: -160px;
+            order: 1;
+            width: 287px;
+            height: 384px;
+            background-image: url("./../img/about__img_2.png");
+        }
+    }
+
+    &__txt {
+        max-width: 448px;
+    }
+
+    &__parag {
+        &:first-child {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 49px;
+        }
+
+        &:last-child {
+            margin-top: 16px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000;
+        }
+    }
+
+    @include media(1050) {
+        
+    }
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    &__svg {
+        --logo-icon-color: #897942;
+
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        opacity: 0.5;
+    }
+
+    &__line {
+        margin: 0 16px;
+        width: 316px;
+        height: 1px;
+        background-color: #000;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 72px;
+        text-transform: uppercase;
+        color: rgba(34, 34, 34, 0.1);
+    }
+
+    @include media(1050) {
+        flex-direction: column;
+
+        &__subtitle {
+            font-size: 24px;
+        }
+
+        &__line {
+            margin: 20px 0;
+            width: 50px;
+            height: 1px;
+            background-color: #000;
+        }
+
+        &__title {
+            font-size: 38px;
+        }
+    }
+}
